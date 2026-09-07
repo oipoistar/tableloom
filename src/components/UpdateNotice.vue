@@ -206,6 +206,7 @@ async function openRelease() {
 }
 .update-option {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 9px;
 }

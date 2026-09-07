@@ -61,5 +61,4 @@ Fonts are bundled under the SIL Open Font License 1.1. Complete notices are in `
 | xml-naming | 0.3.0 | MIT |
 | yjs | 13.6.32 | MIT |
 | zod | 4.5.4 | MIT |
-
 | semver | 7.x | ISC |
