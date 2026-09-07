@@ -1,11 +1,86 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Tableloom — Design, playtest, and print tabletop games</title>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tableloom — Free Board Game &amp; Card Design Software</title>
+<meta name="description" content="Design cards, boards, and tokens with Tableloom, free offline board game design software for Windows. Playtest your ideas and export print-ready PDFs.">
 <meta name="google-site-verification" content="5WwMH2FEM8GEDt82keG8nktmekcey9HjfRNntEobc70">
-<meta name="description" content="An offline desktop workshop for tabletop game design. Create cards, boards, and tokens, manage game data, playtest, and print. Free and open source.">
-<meta name="theme-color" content="#efefed"><link rel="canonical" href="https://tableloom.cc/">
-<meta property="og:type" content="website"><meta property="og:site_name" content="Tableloom"><meta property="og:title" content="Tableloom — Your tabletop workshop"><meta property="og:description" content="Design, playtest, and print tabletop games. Free, open source, and offline ready."><meta property="og:url" content="https://tableloom.cc/"><meta property="og:image" content="https://tableloom.cc/ref/design.png"><meta property="og:image:alt" content="The Tableloom card editor"><meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="ref/icon.png"><link rel="stylesheet" href="style.css"><script defer src="site.js"></script><script defer src="analytics.js?v=20260907-2"></script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Tableloom", "url": "https://tableloom.cc/", "description": "Offline desktop app for designing, playtesting, and printing tabletop games.", "applicationCategory": "DesignApplication", "operatingSystem": "Windows", "downloadUrl": "https://github.com/oipoistar/tableloom/releases/latest", "license": "https://github.com/oipoistar/tableloom/blob/main/LICENSE", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script></head><body><a class="skip-link" href="#workflow">Skip to content</a>
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#efefed">
+<link rel="canonical" href="https://tableloom.cc/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tableloom">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Tableloom — Free Board Game &amp; Card Design Software">
+<meta property="og:description" content="Design cards, boards, and tokens with Tableloom, free offline board game design software for Windows. Playtest your ideas and export print-ready PDFs.">
+<meta property="og:url" content="https://tableloom.cc/">
+<meta property="og:image" content="https://tableloom.cc/ref/design.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+<meta property="og:image:alt" content="Tableloom card design software showing a reusable card template and linked game data">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tableloom — Free Board Game &amp; Card Design Software">
+<meta name="twitter:description" content="Design cards, boards, and tokens with Tableloom, free offline board game design software for Windows. Playtest your ideas and export print-ready PDFs.">
+<meta name="twitter:image" content="https://tableloom.cc/ref/design.png">
+<meta name="twitter:image:alt" content="Tableloom card editor with a reusable template and linked fields">
+<link rel="icon" href="/ref/icon.png" type="image/png">
+<link rel="preload" href="/fonts/alegreya-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css?v=20260907-seo">
+<script defer src="/site.js"></script>
+<script defer src="/analytics.js?v=20260907-2"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://tableloom.cc/#website",
+      "url": "https://tableloom.cc/",
+      "name": "Tableloom",
+      "inLanguage": "en",
+      "description": "Design cards, boards, and tokens with Tableloom, free offline board game design software for Windows. Playtest your ideas and export print-ready PDFs."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://tableloom.cc/#webpage",
+      "url": "https://tableloom.cc/",
+      "name": "Tableloom — Free Board Game & Card Design Software",
+      "description": "Design cards, boards, and tokens with Tableloom, free offline board game design software for Windows. Playtest your ideas and export print-ready PDFs.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://tableloom.cc/#website"
+      },
+      "mainEntity": {
+        "@id": "https://tableloom.cc/#project"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://tableloom.cc/ref/design.png",
+        "width": 1280,
+        "height": 720
+      }
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://tableloom.cc/#project",
+      "name": "Tableloom",
+      "description": "Free, open-source desktop software for designing, playtesting, and printing board games and card games.",
+      "url": "https://tableloom.cc/",
+      "codeRepository": "https://github.com/oipoistar/tableloom",
+      "license": "https://github.com/oipoistar/tableloom/blob/main/LICENSE",
+      "programmingLanguage": [
+        "TypeScript"
+      ],
+      "runtimePlatform": "Electron",
+      "isAccessibleForFree": true
+    }
+  ]
+}
+</script>
+</head><body><a class="skip-link" href="#main-content">Skip to content</a>
 
 <div class="site" style="min-height:100vh;overflow-x:clip;background:#efefed;color:#272b24;font-family:'Source Sans 3',system-ui,sans-serif;background-image:linear-gradient(#dfe3d6 1px,transparent 1px),linear-gradient(90deg,#dfe3d6 1px,transparent 1px);background-size:32px 32px;background-attachment:fixed">
 <!-- Nav -->
@@ -22,12 +97,13 @@
 </nav>
 </div>
 </header>
+<main id="main-content" tabindex="-1">
 <!-- Hero -->
 <section class="hero" style="max-width:1120px;margin:0 auto;padding:72px 24px 40px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:48px;align-items:center">
 <div style="position:relative">
-<div style="font-size:0.72rem;letter-spacing:0.12em;color:#85877c;font-weight:600;margin-bottom:18px">FROM THE WORKBENCH · FREE &amp; OPEN SOURCE</div>
-<h1 style="font-family:Alegreya,serif;font-weight:400;font-size:clamp(2.4rem,4.6vw,3.9rem);line-height:1.08;letter-spacing:-0.025em;text-wrap:pretty">Make room for your <em style="font-style:italic;color:#527c60">next</em> game idea.</h1>
-<p style="margin-top:20px;font-size:1.12rem;line-height:1.55;color:#5f6557;max-width:46ch;text-wrap:pretty">Tableloom is a desktop workshop for designing, playtesting, and printing tabletop games. Templates, card data, artwork, rules and playtest notes — all on one bench, all on your device.</p>
+<div style="font-size:0.72rem;letter-spacing:0.12em;color:#85877c;font-weight:600;margin-bottom:18px">YOUR TABLETOP WORKSHOP · FREE &amp; OPEN SOURCE</div>
+<h1 style="font-family:Alegreya,serif;font-weight:400;font-size:clamp(2.4rem,4.6vw,3.9rem);line-height:1.08;letter-spacing:-0.025em;text-wrap:pretty">Design your <em style="font-style:italic;color:#527c60">next</em> board game.</h1>
+<p style="margin-top:20px;font-size:1.12rem;line-height:1.55;color:#5f6557;max-width:46ch;text-wrap:pretty">Tableloom is free, offline board game design software for Windows. Create cards, boards and tokens, playtest your ideas, and print your next prototype. Templates, game data and artwork stay together on your device.</p>
 <div style="display:flex;gap:12px;margin-top:30px;flex-wrap:wrap;align-items:center">
 <a class="hover-5" href="https://github.com/oipoistar/tableloom" rel="noreferrer" style="display:inline-flex;align-items:center;gap:9px;padding:13px 20px;background:#272b24;color:#fafbf6;border-radius:8px;font-weight:500;font-size:1rem;text-decoration:none;box-shadow:0 6px 0 #4a5540;transition:transform .12s,box-shadow .12s" target="_blank"><span>★</span>Star on GitHub</a>
 <a class="hover-6" href="#download" style="display:inline-flex;align-items:center;gap:9px;padding:13px 18px;background:#fcfcfa;border:1px solid #daddd3;color:#272b24;border-radius:8px;font-weight:500;font-size:1rem;text-decoration:none">Download for Windows</a>
@@ -42,7 +118,7 @@
 <div class="hero-art" style="position:relative;min-height:380px"><div aria-hidden="true" class="hero-pieces" style="position:absolute;inset:-30px;z-index:2;pointer-events:none">
 <div class="piece" style="right:40px;bottom:-18px;width:14px;height:14px;background:#527c60;border-radius:2px;--r:45deg;animation-duration:8.6s;animation-delay:-5.2s"></div>
 </div><div style="position:relative;transform:rotate(-1.2deg);background:#fbfbf9;border-radius:10px;box-shadow:0 22px 50px -18px #272b2450,0 2px 0 #d8dbd0;padding:6px;border:1px solid #e0e1dc">
-<img alt="Tableloom card editor with a linked title field" height="720" src="ref/design.png" style="display:block;width:100%;height:auto;border-radius:6px" width="1280"/>
+<img fetchpriority="high" alt="Tableloom card editor with a reusable template, linked title field, and dimensions in millimetres" height="720" src="ref/design.png" style="display:block;width:100%;height:auto;border-radius:6px" width="1280"/>
 <span style="position:absolute;top:-12px;left:34px;width:86px;height:24px;background:#e9dcb1cc;transform:rotate(-6deg);box-shadow:0 1px 2px #0002;border-left:2px dashed #fff9;border-right:2px dashed #fff9"></span>
 <span style="position:absolute;bottom:-10px;right:44px;width:78px;height:24px;background:#e9dcb1cc;transform:rotate(5deg);box-shadow:0 1px 2px #0002;border-left:2px dashed #fff9;border-right:2px dashed #fff9"></span>
 </div>
@@ -60,7 +136,7 @@
 <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:34px">
 <div>
 <div style="font-size:0.72rem;letter-spacing:0.12em;color:#85877c;font-weight:600;margin-bottom:12px">FROM IDEA TO TABLE</div>
-<h2 style="font-family:Alegreya,serif;font-weight:400;font-size:clamp(1.9rem,3vw,2.6rem);letter-spacing:-0.02em;line-height:1.15">One change.<br/>A better next playtest.</h2>
+<h2 style="font-family:Alegreya,serif;font-weight:400;font-size:clamp(1.9rem,3vw,2.6rem);letter-spacing:-0.02em;line-height:1.15">From game design<br/>to your next playtest.</h2>
 </div>
 <p style="max-width:44ch;color:#7a816f;font-size:0.98rem;line-height:1.5;text-wrap:pretty">Five working views share one project. Link your layout to your game data, and when a rule changes, every connected component follows.</p>
 </div>
@@ -109,8 +185,8 @@
 <div class="feature-row" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:44px;align-items:center">
 <div>
 <div style="font-size:0.72rem;letter-spacing:0.12em;color:#85877c;font-weight:600;margin-bottom:12px">DESIGN</div>
-<h2 style="font-family:Alegreya,serif;font-weight:400;font-size:2.1rem;letter-spacing:-0.02em;line-height:1.15;text-wrap:pretty">Draw one card. Get the whole deck.</h2>
-<p style="margin-top:14px;color:#5f6557;line-height:1.55;text-wrap:pretty">Build front and back templates with text, images, symbols, repeaters and shared styles. Every element is measured in millimetres, with bleed and safe area drawn in. Edit the <strong style="font-weight:600">Template</strong> for shared changes, or <strong style="font-weight:600">This component</strong> for a one-off.</p>
+<h2 style="font-family:Alegreya,serif;font-weight:400;font-size:2.1rem;letter-spacing:-0.02em;line-height:1.15;text-wrap:pretty">Design one card. Build the whole deck.</h2>
+<p style="margin-top:14px;color:#5f6557;line-height:1.55;text-wrap:pretty">Create custom playing cards with reusable front and back templates, text, images, symbols, repeaters and shared styles. Every element is measured in millimetres, with bleed and safe area drawn in. Edit the <strong style="font-weight:600">Template</strong> for shared changes, or <strong style="font-weight:600">This component</strong> for a one-off.</p>
 <ul style="margin:18px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:0.93rem;color:#46513a">
 <li style="display:flex;gap:10px"><span style="color:#527c60">✓</span>Linked fields: <code style="font-family:'JetBrains Mono',monospace;font-size:0.78rem;background:#eeefe9;padding:1px 6px;border-radius:4px">name</code>, <code style="font-family:'JetBrains Mono',monospace;font-size:0.78rem;background:#eeefe9;padding:1px 6px;border-radius:4px">cost</code>, <code style="font-family:'JetBrains Mono',monospace;font-size:0.78rem;background:#eeefe9;padding:1px 6px;border-radius:4px">art</code> — or formulas</li>
 <li style="display:flex;gap:10px"><span style="color:#527c60">✓</span>Inline symbols and <code style="font-family:'JetBrains Mono',monospace;font-size:0.78rem;background:#eeefe9;padding:1px 6px;border-radius:4px">**bold**</code> markup in rules text</li>
@@ -118,13 +194,13 @@
 </ul>
 </div>
 <div style="position:relative;transform:rotate(1deg)">
-<div style="background:#fbfbf9;border-radius:10px;padding:6px;border:1px solid #e0e1dc;box-shadow:0 18px 40px -18px #272b2450"><img alt="Design view" height="720" loading="lazy" src="ref/design.png" style="display:block;width:100%;height:auto;border-radius:6px" width="1280"/></div>
+<div style="background:#fbfbf9;border-radius:10px;padding:6px;border:1px solid #e0e1dc;box-shadow:0 18px 40px -18px #272b2450"><img decoding="async" alt="Custom card template in Tableloom with text, artwork, and shared styles" height="720" loading="lazy" src="ref/design.png" style="display:block;width:100%;height:auto;border-radius:6px" width="1280"/></div>
 <span style="position:absolute;top:-10px;right:30px;width:80px;height:22px;background:#e9dcb1cc;transform:rotate(4deg);box-shadow:0 1px 2px #0002"></span>
 </div>
 </div>
 <div class="feature-row" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:44px;align-items:center">
 <div style="position:relative;transform:rotate(-1deg);order:1">
-<div style="background:#fbfbf9;border-radius:10px;padding:6px;border:1px solid #e0e1dc;box-shadow:0 18px 40px -18px #272b2450"><img alt="Data view with live card preview" height="720" loading="lazy" src="ref/data.png" style="display:block;width:100%;height:auto;border-radius:6px" width="1280"/></div>
+<div style="background:#fbfbf9;border-radius:10px;padding:6px;border:1px solid #e0e1dc;box-shadow:0 18px 40px -18px #272b2450"><img decoding="async" alt="Game card data spreadsheet beside a live preview of the linked card design" height="720" loading="lazy" src="ref/data.png" style="display:block;width:100%;height:auto;border-radius:6px" width="1280"/></div>
 <span style="position:absolute;top:-10px;left:28px;width:80px;height:22px;background:#e9dcb1cc;transform:rotate(-5deg);box-shadow:0 1px 2px #0002"></span>
 </div>
 <div style="order:2">
@@ -136,7 +212,7 @@
 <div class="feature-row" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:44px;align-items:center">
 <div>
 <div style="font-size:0.72rem;letter-spacing:0.12em;color:#85877c;font-weight:600;margin-bottom:12px">EXPORT</div>
-<h2 style="font-family:Alegreya,serif;font-weight:400;font-size:2.1rem;letter-spacing:-0.02em;line-height:1.15;text-wrap:pretty">Print, cut, and play — tonight.</h2>
+<h2 style="font-family:Alegreya,serif;font-weight:400;font-size:2.1rem;letter-spacing:-0.02em;line-height:1.15;text-wrap:pretty">Print-and-play prototypes, ready for the table.</h2>
 <p style="margin-top:14px;color:#5f6557;line-height:1.55;text-wrap:pretty">Preview sheets, pair card backs, set duplex offsets and add crop marks. Desktop builds write PDFs directly. Need more than a home printer? Export component artwork as SVG or PNG, deck sheets for Tabletop Simulator or Screentop, or a production PDF/X‑4 with trim and bleed.</p>
 <div style="margin-top:18px;display:flex;flex-wrap:wrap;gap:8px">
 <span style="border-radius:4px;background:#eeefe9;color:#7c8172;font-size:0.75rem;padding:3px 8px">Home prototype</span>
@@ -147,7 +223,7 @@
 </div>
 </div>
 <div style="position:relative;transform:rotate(0.8deg)">
-<div style="background:#fbfbf9;border-radius:10px;padding:6px;border:1px solid #e0e1dc;box-shadow:0 18px 40px -18px #272b2450"><img alt="Export view with print sheet preview" height="720" loading="lazy" src="ref/export.png" style="display:block;width:100%;height:auto;border-radius:6px" width="1280"/></div>
+<div style="background:#fbfbf9;border-radius:10px;padding:6px;border:1px solid #e0e1dc;box-shadow:0 18px 40px -18px #272b2450"><img decoding="async" alt="Print-and-play PDF sheet preview with card backs, crop marks, and paper settings" height="720" loading="lazy" src="ref/export.png" style="display:block;width:100%;height:auto;border-radius:6px" width="1280"/></div>
 <span style="position:absolute;bottom:-10px;left:40%;width:80px;height:22px;background:#e9dcb1cc;transform:rotate(3deg);box-shadow:0 1px 2px #0002"></span>
 </div>
 </div>
@@ -159,12 +235,12 @@
 </div>
 <div class="hover-13" style="background:#fffef9;border:1px solid #e2e5d9;border-radius:10px;padding:22px;transition:transform .2s">
 <div style="font-size:0.72rem;letter-spacing:0.12em;color:#85877c;font-weight:600;margin-bottom:10px">TEST</div>
-<h3 style="font-family:Alegreya,serif;font-weight:400;font-size:1.4rem;margin-bottom:8px">A table that never needs tidying.</h3>
+<h3 style="font-family:Alegreya,serif;font-weight:400;font-size:1.4rem;margin-bottom:8px">Playtest before you print.</h3>
 <p style="font-size:0.92rem;line-height:1.5;color:#6f7566">Drag, flip, rotate, group, draw and discard. Player areas, counters, saved setups, and notes — you resolve the rules, it keeps the pieces.</p>
 </div>
 <div class="hover-14" style="background:#fffef9;border:1px solid #e2e5d9;border-radius:10px;padding:22px;transition:transform .2s">
 <div style="font-size:0.72rem;letter-spacing:0.12em;color:#85877c;font-weight:600;margin-bottom:10px">STARTERS</div>
-<h3 style="font-family:Alegreya,serif;font-weight:400;font-size:1.4rem;margin-bottom:8px">Six little head starts.</h3>
+<h3 style="font-family:Alegreya,serif;font-weight:400;font-size:1.4rem;margin-bottom:8px">Six editable game starters.</h3>
 <p style="font-size:0.92rem;line-height:1.5;color:#6f7566">Saltmarsh, Orchard Market, Wanderlands, Little Machines, Pocket Treasury and Field Notes. Original, editable starters with CC0 artwork.</p>
 </div>
 </div>
@@ -175,11 +251,11 @@
 <div style="position:absolute;inset:0;background-image:linear-gradient(#ffffff0c 1px,transparent 1px),linear-gradient(90deg,#ffffff0c 1px,transparent 1px);background-size:32px 32px;pointer-events:none"></div>
 <div style="position:relative">
 <div style="font-size:0.72rem;letter-spacing:0.12em;color:#b0c39b;font-weight:600;margin-bottom:12px">DOWNLOAD</div>
-<h2 style="font-family:Alegreya,serif;font-weight:400;font-size:2.2rem;letter-spacing:-0.02em;line-height:1.15;color:#fafbf6;text-wrap:pretty">Ready for your bench.</h2>
+<h2 style="font-family:Alegreya,serif;font-weight:400;font-size:2.2rem;letter-spacing:-0.02em;line-height:1.15;color:#fafbf6;text-wrap:pretty">Download Tableloom for Windows.</h2>
 <p style="margin-top:14px;line-height:1.55;color:#cfd8bf;text-wrap:pretty">Early release for Windows x64. Builds are unsigned — verify the checksum if you like. macOS and Linux packaging is in the source; tested downloads are Windows for now.</p>
 <div style="display:flex;gap:10px;margin-top:24px;flex-wrap:wrap">
-<a class="hover-15" data-download="setup" href="https://github.com/oipoistar/tableloom/releases/download/v0.1.2/Tableloom-0.1.2-win-x64-Setup.exe" rel="noreferrer" style="display:inline-flex;align-items:center;gap:8px;padding:12px 18px;background:#fafbf6;color:#272b24;border-radius:8px;font-weight:600;text-decoration:none" target="_blank">Setup.exe</a>
-<a class="hover-16" data-download="portable" href="https://github.com/oipoistar/tableloom/releases/download/v0.1.2/Tableloom-0.1.2-win-x64-Portable.exe" rel="noreferrer" style="display:inline-flex;align-items:center;gap:8px;padding:12px 18px;background:transparent;color:#fafbf6;border:1px solid #6f8776;border-radius:8px;font-weight:500;text-decoration:none" target="_blank">Portable.exe</a>
+<a class="hover-15" data-download="setup" href="https://github.com/oipoistar/tableloom/releases/download/v0.1.2/Tableloom-0.1.2-win-x64-Setup.exe" rel="noreferrer" style="display:inline-flex;align-items:center;gap:8px;padding:12px 18px;background:#fafbf6;color:#272b24;border-radius:8px;font-weight:600;text-decoration:none" target="_blank">Download installer</a>
+<a class="hover-16" data-download="portable" href="https://github.com/oipoistar/tableloom/releases/download/v0.1.2/Tableloom-0.1.2-win-x64-Portable.exe" rel="noreferrer" style="display:inline-flex;align-items:center;gap:8px;padding:12px 18px;background:transparent;color:#fafbf6;border:1px solid #6f8776;border-radius:8px;font-weight:500;text-decoration:none" target="_blank">Download portable app</a>
 </div>
 </div>
 <div style="position:relative;display:flex;flex-direction:column;gap:12px;justify-content:center">
@@ -215,7 +291,7 @@
 <!-- FAQ -->
 <section id="faq" style="max-width:760px;margin:0 auto;padding:60px 24px 80px">
 <div style="font-size:0.72rem;letter-spacing:0.12em;color:#85877c;font-weight:600;margin-bottom:12px">QUESTIONS FROM THE BENCH</div>
-<h2 style="font-family:Alegreya,serif;font-weight:400;font-size:2.1rem;letter-spacing:-0.02em;margin-bottom:26px">Good to know</h2>
+<h2 style="font-family:Alegreya,serif;font-weight:400;font-size:2.1rem;letter-spacing:-0.02em;margin-bottom:26px">Questions about Tableloom</h2>
 <div style="display:flex;flex-direction:column;gap:8px">
 <details class="faq-item" open="" style="background:#fffef9;border:1px solid #e2e5d9;border-radius:10px;overflow:hidden">
 <summary class="hover-19" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;padding:16px 18px;background:none;border:0;font:inherit;color:inherit;cursor:pointer;font-weight:600;font-size:1rem">
@@ -236,7 +312,7 @@
 <summary class="hover-22" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;padding:16px 18px;background:none;border:0;font:inherit;color:inherit;cursor:pointer;font-weight:600;font-size:1rem">
 <span>Is it print-shop ready?</span><span class="faq-plus" style="font-family:JetBrains Mono,monospace;color:#85867c;transition:transform .25s;display:inline-block">+</span>
 </summary>
-<div style=""><p style="padding:0 18px 18px;color:#5f6557;line-height:1.55;font-size:0.95rem;text-wrap:pretty">Home prototypes export straight to PDF. Production PDF/X‑4 conversion needs a separately installed Ghostscript executable and your printer’s CMYK profile — see the printing guide.</p></div>
+<div style=""><p style="padding:0 18px 18px;color:#5f6557;line-height:1.55;font-size:0.95rem;text-wrap:pretty">Home prototypes export straight to PDF. Production PDF/X‑4 conversion needs a separately installed Ghostscript executable and your printer’s CMYK profile — see the <a href="https://github.com/oipoistar/tableloom/blob/main/docs/PRINTING.md">Tableloom printing guide</a>.</p></div>
 </details><details class="faq-item" style="background:#fffef9;border:1px solid #e2e5d9;border-radius:10px;overflow:hidden">
 <summary class="hover-23" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;padding:16px 18px;background:none;border:0;font:inherit;color:inherit;cursor:pointer;font-weight:600;font-size:1rem">
 <span>Mac or Linux?</span><span class="faq-plus" style="font-family:JetBrains Mono,monospace;color:#85867c;transition:transform .25s;display:inline-block">+</span>
@@ -248,8 +324,21 @@
 </summary>
 <div style=""><p style="padding:0 18px 18px;color:#5f6557;line-height:1.55;font-size:0.95rem;text-wrap:pretty">Exports provide files for import into both. There is no account-based publishing integration.</p></div>
 </details>
+<details class="faq-item" style="background:#fffef9;border:1px solid #e2e5d9;border-radius:10px;overflow:hidden">
+<summary style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;padding:16px 18px;background:none;border:0;font:inherit;color:inherit;cursor:pointer;font-weight:600;font-size:1rem">
+<span>Is Tableloom free to use?</span><span class="faq-plus" aria-hidden="true" style="font-family:JetBrains Mono,monospace;color:#85867c;transition:transform .25s;display:inline-block">+</span>
+</summary>
+<p style="padding:0 18px 18px;color:#5f6557;line-height:1.55;font-size:0.95rem;text-wrap:pretty">Yes. Tableloom is free and open source under the Apache 2.0 license, with no subscription or account required. Download the Windows installer or portable app and start a project.</p>
+</details>
+<details class="faq-item" style="background:#fffef9;border:1px solid #e2e5d9;border-radius:10px;overflow:hidden">
+<summary style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;padding:16px 18px;background:none;border:0;font:inherit;color:inherit;cursor:pointer;font-weight:600;font-size:1rem">
+<span>How do I make my own card game?</span><span class="faq-plus" aria-hidden="true" style="font-family:JetBrains Mono,monospace;color:#85867c;transition:transform .25s;display:inline-block">+</span>
+</summary>
+<p style="padding:0 18px 18px;color:#5f6557;line-height:1.55;font-size:0.95rem;text-wrap:pretty">Open an editable starter or create a new project, add your cards, and design a shared template. Enter each card’s name, rules, and artwork in the Data view, or import a spreadsheet. Then try the deck on the manual playtest table and export a PDF for printing.</p>
+</details>
 </div>
 </section>
+</main>
 <footer style="border-top:1px solid #e0e1dc;background:#f7f8f3">
 <div style="max-width:1120px;margin:0 auto;padding:26px 24px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-size:0.82rem;color:#8b8e81">
 <span style="display:inline-flex;width:24px;height:24px;background:#354532;border-radius:6px;align-items:center;justify-content:center;gap:2px;transform:rotate(-2deg)"><i style="display:block;width:3px;height:12px;background:#e0e7ca;border-radius:1px;transform:skewY(-24deg)"></i><i style="display:block;width:3px;height:16px;background:#b0c39b;border-radius:1px;transform:skewY(-24deg)"></i><i style="display:block;width:3px;height:12px;background:#e0e7ca;border-radius:1px;transform:skewY(-24deg)"></i></span>
