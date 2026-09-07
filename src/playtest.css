@@ -1,0 +1,438 @@
+.playtest-workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 268px;
+  height: 100%;
+  min-height: 0;
+  background: #f7f8f1;
+}
+.playtest-main {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+.playtest-heading {
+  padding: 16px 22px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.playtest-heading h2 {
+  font: 600 1.45rem 'Alegreya';
+  margin: 3px 0 0;
+}
+.playtest-heading .eyebrow {
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+}
+.playtest-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 43px;
+  padding: 6px 18px;
+  border-block: 1px solid var(--line);
+  flex-wrap: wrap;
+}
+.playtest-toolbar .text-button {
+  font-size: 0.76rem;
+}
+.phase-label {
+  font-weight: 700;
+  font-size: 0.82rem;
+}
+.phase-label small {
+  font-weight: 400;
+  color: var(--muted);
+  margin-left: 7px;
+}
+.turn-label {
+  font-size: 0.78rem;
+  border-left: 1px solid var(--line);
+  padding-left: 12px;
+}
+.zoom-readout {
+  font: 11px 'JetBrains Mono';
+  width: 34px;
+  text-align: center;
+}
+.table-counters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 8px 18px;
+  background: #f0f2e9;
+}
+.table-counter {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.73rem;
+  border-left: 3px solid;
+  padding-left: 9px;
+}
+.table-counter strong {
+  min-width: 17px;
+  text-align: center;
+}
+.table-counter button {
+  border: 1px solid #d6d9cb;
+  background: #fff9;
+  width: 23px;
+  height: 23px;
+  border-radius: 4px;
+}
+.playtest-viewport {
+  flex: 1;
+  min-height: 180px;
+  overflow: auto;
+  padding: 14px;
+  background: #22271f;
+  overscroll-behavior: contain;
+}
+.playtest-scroll-space {
+  position: relative;
+}
+.playtest-world {
+  position: relative;
+  transform-origin: top left;
+  border-radius: 8px;
+  background-image: radial-gradient(#f0e7c809 0.8px, transparent 0.8px);
+  background-size: 5px 5px;
+  box-shadow: 0 10px 40px #0003;
+  isolation: isolate;
+}
+.play-zone {
+  position: absolute;
+  border: 1.5px solid;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--zone-color) 8%, transparent);
+  z-index: 2;
+  pointer-events: none;
+}
+.play-zone-label {
+  position: absolute;
+  top: 7px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  color: #e4dfc8;
+  font: 600 14px 'Source Sans 3';
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.play-zone-label b {
+  opacity: 0.65;
+}
+.pile-actions {
+  position: absolute;
+  bottom: 5px;
+  left: 6px;
+  right: 6px;
+  display: flex;
+  justify-content: space-around;
+  gap: 4px;
+  pointer-events: auto;
+  z-index: 2;
+}
+.pile-actions button {
+  color: #eee5c9;
+  background: #292b23;
+  border: 1px solid #6b6d57;
+  border-radius: 3px;
+  padding: 3px 6px;
+  font: 12px 'Source Sans 3';
+}
+.play-piece {
+  position: absolute;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  border-radius: 4px;
+  touch-action: none;
+  cursor: grab;
+  user-select: none;
+  filter: drop-shadow(0 3px 4px #0006);
+}
+.play-piece .component-preview {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.play-piece .component-preview svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.play-piece.locked {
+  cursor: default;
+  filter: none;
+}
+.play-piece.selected {
+  outline: 3px solid #efc879;
+  outline-offset: 3px;
+}
+.play-piece.dragging {
+  cursor: grabbing;
+  filter: drop-shadow(0 12px 12px #0008);
+}
+.play-piece.covered {
+  cursor: pointer;
+}
+.covered-badge {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  font: 10px 'Source Sans 3';
+  background: #20231cd9;
+  color: #eee3c9;
+  padding: 1px 5px;
+  border-radius: 3px;
+  pointer-events: none;
+}
+.generic-card-back {
+  width: 100%;
+  height: 100%;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: repeating-linear-gradient(45deg, #48513b 0px, #48513b 6px, #424a36 6px, #424a36 12px);
+  border: 5px double #d7c998;
+  color: #e6dabc;
+  font: 12px 'Stardos Stencil';
+  border-radius: 4px;
+}
+.playtest-status {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 15px;
+  font-size: 0.67rem;
+  color: var(--muted);
+}
+.playtest-inspector {
+  overflow: auto;
+  min-height: 0;
+  border-left: 1px solid var(--line);
+  background: #fafbf5;
+}
+.playtest-inspector .inspector-section {
+  padding: 16px;
+}
+.playtest-inspector h3 {
+  font-size: 0.9rem;
+}
+.playtest-inspector label {
+  font-size: 0.75rem;
+}
+.playtest-inspector select,
+.playtest-inspector input {
+  width: 100%;
+  font-size: 0.76rem;
+}
+.playtest-inspector select {
+  margin-block: 7px;
+}
+.playtest-inspector .inline input {
+  min-width: 0;
+}
+.playtest-inspector details {
+  margin-top: 12px;
+  font-size: 0.77rem;
+}
+.playtest-inspector summary {
+  cursor: pointer;
+  color: var(--muted);
+}
+.playtest-inspector small {
+  display: block;
+  line-height: 1.4;
+}
+.playtest-inspector .muted {
+  font-size: 0.79rem;
+  line-height: 1.5;
+}
+.selected-piece-preview {
+  display: block;
+  max-width: 100%;
+  width: 142px;
+  max-height: 218px;
+  margin: 13px auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.selected-piece-preview .component-preview {
+  max-height: 218px;
+}
+.selected-piece-preview svg {
+  max-height: 218px;
+  width: 100%;
+}
+.piece-rules {
+  font-size: 0.79rem;
+  line-height: 1.5;
+}
+.piece-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.piece-actions .button {
+  justify-content: center;
+  padding: 7px;
+  font-size: 0.74rem;
+}
+.dice-controls {
+  margin-top: 15px;
+}
+.dice-controls select {
+  width: 63px;
+}
+.table-log-entry {
+  font-size: 0.72rem;
+  color: var(--muted);
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--line);
+}
+.inspect-piece {
+  max-width: 100%;
+  width: 300px;
+  margin: 0 auto 20px;
+}
+.inspect-piece svg {
+  width: 100%;
+  max-height: 65vh;
+}
+.pile-browser {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+  max-height: 65vh;
+  overflow: auto;
+}
+.pile-browser article {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.pile-browser .component-preview {
+  height: 205px;
+}
+.pile-browser svg {
+  width: 100%;
+  height: 100%;
+}
+.pile-browser strong {
+  font-size: 0.8rem;
+}
+.pile-browser .button {
+  font-size: 0.73rem;
+  justify-content: center;
+}
+.manual-mode-note {
+  padding: 14px;
+  background: #eff2e6;
+  border-left: 3px solid #899775;
+  line-height: 1.55;
+}
+.table-rule-section {
+  margin-top: 20px;
+}
+.table-rule-section p {
+  white-space: pre-line;
+  line-height: 1.7;
+  font-size: 0.9rem;
+}
+.zone-editor {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  font-size: 0.75rem;
+}
+.zone-editor strong {
+  width: 160px;
+  flex-shrink: 0;
+}
+.zone-editor label {
+  flex: 1;
+  min-width: 0;
+}
+.zone-editor input {
+  width: 100%;
+}
+.sample-showcase {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  padding: 24px;
+  background: #343b2c;
+  color: #eae3cc;
+  border-radius: 12px;
+  margin-bottom: 28px;
+  border: 1px solid #555e44;
+}
+.sample-showcase img {
+  width: 200px;
+  height: 125px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.sample-showcase h2 {
+  font: 700 1.8rem 'Stardos Stencil';
+  margin: 6px 0;
+}
+.sample-showcase p {
+  margin: 8px 0 14px;
+  max-width: 530px;
+  color: #c3c4ac;
+  font-size: 0.88rem;
+}
+.sample-showcase .eyebrow {
+  color: #c6aa6f;
+}
+.sample-showcase .button {
+  background: #e4d7b4;
+  color: #33392a;
+  border: 0;
+}
+@media (max-width: 1100px) {
+  .playtest-workspace {
+    grid-template-columns: minmax(0, 1fr) 235px;
+  }
+  .playtest-heading {
+    padding: 12px;
+  }
+  .playtest-heading h2 {
+    font-size: 1.15rem;
+  }
+  .playtest-heading .button {
+    font-size: 0.72rem;
+    padding: 7px;
+  }
+  .playtest-status {
+    font-size: 0.58rem;
+  }
+  .playtest-toolbar {
+    gap: 6px;
+  }
+  .sample-showcase img {
+    width: 130px;
+  }
+}
+
+.studio-body.table-focused {
+  grid-template-columns: minmax(0, 1fr);
+}
+.playtest-workspace.tools-hidden {
+  grid-template-columns: minmax(0, 1fr);
+}

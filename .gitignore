@@ -1,0 +1,34 @@
+node_modules/
+dist/
+release/
+test-results/
+playwright-report/
+.tableloom-server/
+*.log
+.env
+.env.*
+!.env.example
+artifacts/
+
+# Local design material and unpublished examples
+/design-reference/
+/*research*
+/*analysis*
+/*.zip
+/docs/IMPLEMENTATION.md
+/docs/DUEL_SAMPLE.md
+/samples/
+/public/samples/
+/scripts/build-duel-sample.ts
+/scripts/prepare-duel-assets.py
+*.tableloom
+
+# Local credentials and editor state
+*.pem
+*.p12
+*.pfx
+*.key
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

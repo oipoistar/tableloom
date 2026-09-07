@@ -1,0 +1,12 @@
+node_modules
+dist
+release
+artifacts
+design-reference
+package-lock.json
+src/font-manifest.json
+docs/THIRD_PARTY.md
+docs/font-licenses
+
+scripts/build-duel-sample.ts
+scripts/prepare-duel-assets.py
