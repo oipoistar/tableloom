@@ -51,8 +51,13 @@
     const script = document.createElement('script');
     script.async = true;
     script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
-    script.onerror = () => console.warn('Tableloom: Google Analytics could not load.');
+    script.dataset.state = 'loading';
+    script.onerror = () => {
+      script.dataset.state = 'unavailable';
+      console.warn('Tableloom: Google Analytics could not load.');
+    };
     script.onload = () => {
+      script.dataset.state = 'loaded';
       if (new URLSearchParams(location.search).has('gtm_debug')) {
         console.info('Tableloom: Google Analytics script loaded.');
       }
