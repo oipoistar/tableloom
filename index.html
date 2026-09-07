@@ -1,0 +1,269 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tableloom — Design, playtest, and print tabletop games</title>
+<meta name="description" content="An offline desktop workshop for tabletop game design. Create cards, boards, and tokens, manage game data, playtest, and print. Free and open source.">
+<meta name="theme-color" content="#efefed"><link rel="canonical" href="https://tableloom.cc/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Tableloom"><meta property="og:title" content="Tableloom — Your tabletop workshop"><meta property="og:description" content="Design, playtest, and print tabletop games. Free, open source, and offline ready."><meta property="og:url" content="https://tableloom.cc/"><meta property="og:image" content="https://tableloom.cc/ref/design.png"><meta property="og:image:alt" content="The Tableloom card editor"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="ref/icon.png"><link rel="stylesheet" href="style.css"><script defer src="site.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Tableloom", "url": "https://tableloom.cc/", "description": "Offline desktop app for designing, playtesting, and printing tabletop games.", "applicationCategory": "DesignApplication", "operatingSystem": "Windows", "downloadUrl": "https://github.com/oipoistar/tableloom/releases/latest", "license": "https://github.com/oipoistar/tableloom/blob/main/LICENSE", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script></head><body><a class="skip-link" href="#workflow">Skip to content</a>
+
+<div class="site" style="min-height:100vh;overflow-x:clip;background:#efefed;color:#272b24;font-family:'Source Sans 3',system-ui,sans-serif;background-image:linear-gradient(#dfe3d6 1px,transparent 1px),linear-gradient(90deg,#dfe3d6 1px,transparent 1px);background-size:32px 32px;background-attachment:fixed">
+<!-- Nav -->
+<header style="position:sticky;top:0;z-index:20;background:#f7f8f3f2;backdrop-filter:blur(8px);border-bottom:1px solid #e0e1dc">
+<div class="nav-inner" style="max-width:1120px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;gap:14px">
+<span style="display:inline-flex;width:32px;height:32px;background:#354532;border-radius:8px;align-items:center;justify-content:center;gap:3px;transform:rotate(-2deg)"><i style="display:block;width:4px;height:16px;background:#e0e7ca;border-radius:1px;transform:skewY(-24deg)"></i><i style="display:block;width:4px;height:21px;background:#b0c39b;border-radius:1px;transform:skewY(-24deg)"></i><i style="display:block;width:4px;height:16px;background:#e0e7ca;border-radius:1px;transform:skewY(-24deg)"></i></span>
+<div style="line-height:1.1"><strong style="display:block;font-size:1.2rem;letter-spacing:-0.04em;font-weight:600">Tableloom</strong><small style="display:block;color:#8b8e81;font-size:0.72rem">Your tabletop workshop</small></div>
+<nav aria-label="Main navigation" style="margin-left:auto;display:flex;gap:4px;align-items:center;flex-wrap:wrap">
+<a class="hover-0" href="#workflow" style="padding:7px 10px;border-radius:6px;font-size:0.9rem;color:#606655;text-decoration:none">How it works</a>
+<a class="hover-1" href="#features" style="padding:7px 10px;border-radius:6px;font-size:0.9rem;color:#606655;text-decoration:none">Features</a>
+<a class="hover-2" href="#download" style="padding:7px 10px;border-radius:6px;font-size:0.9rem;color:#606655;text-decoration:none">Download</a>
+<a class="hover-3" href="#faq" style="padding:7px 10px;border-radius:6px;font-size:0.9rem;color:#606655;text-decoration:none">FAQ</a>
+<a class="hover-4" href="https://github.com/oipoistar/tableloom" rel="noreferrer" style="margin-left:6px;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:#272b24;color:#fafbf6;border-radius:6px;font-weight:500;font-size:0.9rem;text-decoration:none;transition:transform .15s,background .15s" target="_blank"><span style="font-size:1rem;line-height:1">★</span>Star on GitHub</a>
+</nav>
+</div>
+</header>
+<!-- Hero -->
+<section class="hero" style="max-width:1120px;margin:0 auto;padding:72px 24px 40px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:48px;align-items:center">
+<div style="position:relative">
+<div style="font-size:0.72rem;letter-spacing:0.12em;color:#85877c;font-weight:600;margin-bottom:18px">FROM THE WORKBENCH · FREE &amp; OPEN SOURCE</div>
+<h1 style="font-family:Alegreya,serif;font-weight:400;font-size:clamp(2.4rem,4.6vw,3.9rem);line-height:1.08;letter-spacing:-0.025em;text-wrap:pretty">Make room for your <em style="font-style:italic;color:#527c60">next</em> game idea.</h1>
+<p style="margin-top:20px;font-size:1.12rem;line-height:1.55;color:#5f6557;max-width:46ch;text-wrap:pretty">Tableloom is a desktop workshop for designing, playtesting, and printing tabletop games. Templates, card data, artwork, rules and playtest notes — all on one bench, all on your device.</p>
+<div style="display:flex;gap:12px;margin-top:30px;flex-wrap:wrap;align-items:center">
+<a class="hover-5" href="https://github.com/oipoistar/tableloom" rel="noreferrer" style="display:inline-flex;align-items:center;gap:9px;padding:13px 20px;background:#272b24;color:#fafbf6;border-radius:8px;font-weight:500;font-size:1rem;text-decoration:none;box-shadow:0 6px 0 #4a5540;transition:transform .12s,box-shadow .12s" target="_blank"><span>★</span>Star on GitHub</a>
+<a class="hover-6" href="#download" style="display:inline-flex;align-items:center;gap:9px;padding:13px 18px;background:#fcfcfa;border:1px solid #daddd3;color:#272b24;border-radius:8px;font-weight:500;font-size:1rem;text-decoration:none">Download for Windows</a>
+<span id="release-version" style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:#85867c">v0.1.2 · Apache-2.0</span>
+</div>
+<div style="margin-top:34px;display:flex;gap:22px;flex-wrap:wrap;font-size:0.85rem;color:#7b8571">
+<span style="display:inline-flex;align-items:center;gap:7px"><span style="width:6px;height:6px;border-radius:50%;background:#689874;display:inline-block"></span>Works offline</span>
+<span style="display:inline-flex;align-items:center;gap:7px"><span style="width:6px;height:6px;border-radius:50%;background:#689874;display:inline-block"></span>No account</span>
+<span style="display:inline-flex;align-items:center;gap:7px"><span style="width:6px;height:6px;border-radius:50%;background:#689874;display:inline-block"></span>One portable .tableloom file</span>
+</div>
+</div>
+<div class="hero-art" style="position:relative;min-height:380px"><div aria-hidden="true" class="hero-pieces" style="position:absolute;inset:-30px;z-index:2;pointer-events:none">
+<div class="piece" style="left:-22px;top:46px;width:46px;height:64px;background:#faf7ef;border:1px solid #d4ccb9;border-radius:4px;box-shadow:0 8px 16px -8px #272b2440;--r:-9deg;animation-duration:5.9s;animation-delay:-1.3s"><div style="margin:5px;height:22px;background:#dfe4d1;border-radius:2px"></div></div>
+<div class="piece" style="right:-18px;top:-22px;width:40px;height:40px;border-radius:50%;background:#f4ecdc;border:3px solid #b59b58;box-shadow:0 8px 16px -8px #272b2440;--r:8deg;animation-duration:6.8s;animation-delay:-2.6s;display:flex;align-items:center;justify-content:center;font-family:Alegreya,serif;color:#8a6a45;font-weight:700">5</div>
+<div class="piece" style="left:40%;top:-34px;width:44px;height:38px;background:#dfe4d1;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);--r:6deg;opacity:.9;animation-duration:7.7s;animation-delay:-3.9s"></div>
+<div class="piece" style="right:40px;bottom:-18px;width:14px;height:14px;background:#527c60;border-radius:2px;--r:45deg;animation-duration:8.6s;animation-delay:-5.2s"></div>
+<div class="piece" style="left:30px;bottom:-40px;width:90px;height:8px;background:#b78658;border-radius:2px;--r:-4deg;box-shadow:0 4px 8px -4px #0004;animation-duration:9.5s;animation-delay:-6.5s"></div>
+</div><div style="position:relative;transform:rotate(-1.2deg);background:#fbfbf9;border-radius:10px;box-shadow:0 22px 50px -18px #272b2450,0 2px 0 #d8dbd0;padding:6px;border:1px solid #e0e1dc">
+<img alt="Tableloom card editor with a linked title field" height="720" src="ref/design.png" style="display:block;width:100%;height:auto;border-radius:6px" width="1280"/>
+<span style="position:absolute;top:-12px;left:34px;width:86px;height:24px;background:#e9dcb1cc;transform:rotate(-6deg);box-shadow:0 1px 2px #0002;border-left:2px dashed #fff9;border-right:2px dashed #fff9"></span>
+<span style="position:absolute;bottom:-10px;right:44px;width:78px;height:24px;background:#e9dcb1cc;transform:rotate(5deg);box-shadow:0 1px 2px #0002;border-left:2px dashed #fff9;border-right:2px dashed #fff9"></span>
+</div>
+<div style="position:absolute;right:-8px;bottom:-26px;background:#fffef9;border:1px solid #e2e5d9;border-radius:8px;padding:10px 14px;font-family:Alegreya,serif;font-size:1.05rem;transform:rotate(2.5deg);box-shadow:0 8px 20px -10px #272b2440;color:#46513a">“Salt Farm”, ×4 — <span style="color:#527c60">affects 12 cards</span></div>
+</div>
+</section>
+<!-- Ruler strip -->
+<div style="max-width:1120px;margin:48px auto 0;padding:0 24px">
+<div style="height:22px;border-top:2px solid #b78658;border-bottom:1px solid #b7865860;background:#f4ecdc;background-image:repeating-linear-gradient(90deg,#b78658 0 1px,transparent 1px 8px),repeating-linear-gradient(90deg,#b78658 0 1px,transparent 1px 40px);background-size:8px 7px,40px 14px;background-repeat:repeat-x;border-radius:2px;position:relative">
+<span style="position:absolute;right:10px;top:4px;font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:#8a6a45;letter-spacing:0.1em">63 × 88 mm · 3 mm bleed · 3 mm safe</span>
+</div>
+</div>
+<!-- Workflow -->
+<section id="workflow" style="max-width:1120px;margin:0 auto;padding:80px 24px 40px">
+<div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:34px">
+<div>
+<div style="font-size:0.72rem;letter-spacing:0.12em;color:#85877c;font-weight:600;margin-bottom:12px">FROM IDEA TO TABLE</div>
+<h2 style="font-family:Alegreya,serif;font-weight:400;font-size:clamp(1.9rem,3vw,2.6rem);letter-spacing:-0.02em;line-height:1.15">One change.<br/>A better next playtest.</h2>
+</div>
+<p style="max-width:44ch;color:#7a816f;font-size:0.98rem;line-height:1.5;text-wrap:pretty">Five working views share one project. Link your layout to your game data, and when a rule changes, every connected component follows.</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px">
+<button aria-pressed="true" class="hover-7" data-step="0" style="text-align:left;cursor:pointer;font:inherit;color:inherit;border:1px solid #527c60;background:#fffef9;border-radius:10px;padding:18px 16px 16px;position:relative;transform:translateY(-6px) rotate(-1deg);transition:transform .35s cubic-bezier(.2,.8,.2,1),background .3s,border-color .3s;box-shadow:0 14px 30px -14px #272b2440">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+<span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#85867c">01</span>
+<span class="step-dot" style="width:8px;height:8px;border-radius:50%;background:#527c60;transition:background .3s"></span>
+</div>
+<h3 style="font-size:1.05rem;font-weight:600;margin-bottom:6px">Design</h3>
+<p style="font-size:0.86rem;line-height:1.45;color:#6f7566;text-wrap:pretty">Build front and back templates with linked fields, symbols and shared styles.</p>
+</button><button aria-pressed="false" class="hover-8" data-step="1" style="text-align:left;cursor:pointer;font:inherit;color:inherit;border:1px solid #e0e1dc;background:#f7f7f5;border-radius:10px;padding:18px 16px 16px;position:relative;transform:none;transition:transform .35s cubic-bezier(.2,.8,.2,1),background .3s,border-color .3s;box-shadow:none">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+<span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#85867c">02</span>
+<span class="step-dot" style="width:8px;height:8px;border-radius:50%;background:#d8dbd0;transition:background .3s"></span>
+</div>
+<h3 style="font-size:1.05rem;font-weight:600;margin-bottom:6px">Data</h3>
+<p style="font-size:0.86rem;line-height:1.45;color:#6f7566;text-wrap:pretty">Edit records next to a live preview. Paste, import, or write formulas.</p>
+</button><button aria-pressed="false" class="hover-9" data-step="2" style="text-align:left;cursor:pointer;font:inherit;color:inherit;border:1px solid #e0e1dc;background:#f7f7f5;border-radius:10px;padding:18px 16px 16px;position:relative;transform:none;transition:transform .35s cubic-bezier(.2,.8,.2,1),background .3s,border-color .3s;box-shadow:none">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+<span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#85867c">03</span>
+<span class="step-dot" style="width:8px;height:8px;border-radius:50%;background:#d8dbd0;transition:background .3s"></span>
+</div>
+<h3 style="font-size:1.05rem;font-weight:600;margin-bottom:6px">Review</h3>
+<p style="font-size:0.86rem;line-height:1.45;color:#6f7566;text-wrap:pretty">Find overflowing text, missing art, and what changed since last version.</p>
+</button><button aria-pressed="false" class="hover-10" data-step="3" style="text-align:left;cursor:pointer;font:inherit;color:inherit;border:1px solid #e0e1dc;background:#f7f7f5;border-radius:10px;padding:18px 16px 16px;position:relative;transform:none;transition:transform .35s cubic-bezier(.2,.8,.2,1),background .3s,border-color .3s;box-shadow:none">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+<span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#85867c">04</span>
+<span class="step-dot" style="width:8px;height:8px;border-radius:50%;background:#d8dbd0;transition:background .3s"></span>
+</div>
+<h3 style="font-size:1.05rem;font-weight:600;margin-bottom:6px">Test</h3>
+<p style="font-size:0.86rem;line-height:1.45;color:#6f7566;text-wrap:pretty">Shuffle, deal, flip and count on a table that keeps its pieces.</p>
+</button><button aria-pressed="false" class="hover-11" data-step="4" style="text-align:left;cursor:pointer;font:inherit;color:inherit;border:1px solid #e0e1dc;background:#f7f7f5;border-radius:10px;padding:18px 16px 16px;position:relative;transform:none;transition:transform .35s cubic-bezier(.2,.8,.2,1),background .3s,border-color .3s;box-shadow:none">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+<span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#85867c">05</span>
+<span class="step-dot" style="width:8px;height:8px;border-radius:50%;background:#d8dbd0;transition:background .3s"></span>
+</div>
+<h3 style="font-size:1.05rem;font-weight:600;margin-bottom:6px">Export</h3>
+<p style="font-size:0.86rem;line-height:1.45;color:#6f7566;text-wrap:pretty">Print sheets, artwork, deck sheets, or a production PDF.</p>
+</button>
+</div>
+<div style="margin-top:14px;height:3px;background:#e0e1dc;border-radius:2px;overflow:hidden"><div id="workflow-progress" style="height:100%;width:0%;background:#527c60;transition:width .1s linear;border-radius:2px"></div></div>
+<div class="motion-controls"><button aria-pressed="false" id="motion-toggle" type="button">Pause animation</button></div></section>
+<!-- Features -->
+<section id="features" style="max-width:1120px;margin:0 auto;padding:60px 24px 20px;display:flex;flex-direction:column;gap:72px">
+<div class="feature-row" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:44px;align-items:center">
+<div>
+<div style="font-size:0.72rem;letter-spacing:0.12em;color:#85877c;font-weight:600;margin-bottom:12px">DESIGN</div>
+<h2 style="font-family:Alegreya,serif;font-weight:400;font-size:2.1rem;letter-spacing:-0.02em;line-height:1.15;text-wrap:pretty">Draw one card. Get the whole deck.</h2>
+<p style="margin-top:14px;color:#5f6557;line-height:1.55;text-wrap:pretty">Build front and back templates with text, images, symbols, repeaters and shared styles. Every element is measured in millimetres, with bleed and safe area drawn in. Edit the <strong style="font-weight:600">Template</strong> for shared changes, or <strong style="font-weight:600">This component</strong> for a one-off.</p>
+<ul style="margin:18px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:0.93rem;color:#46513a">
+<li style="display:flex;gap:10px"><span style="color:#527c60">✓</span>Linked fields: <code style="font-family:'JetBrains Mono',monospace;font-size:0.78rem;background:#eeefe9;padding:1px 6px;border-radius:4px">name</code>, <code style="font-family:'JetBrains Mono',monospace;font-size:0.78rem;background:#eeefe9;padding:1px 6px;border-radius:4px">cost</code>, <code style="font-family:'JetBrains Mono',monospace;font-size:0.78rem;background:#eeefe9;padding:1px 6px;border-radius:4px">art</code> — or formulas</li>
+<li style="display:flex;gap:10px"><span style="color:#527c60">✓</span>Inline symbols and <code style="font-family:'JetBrains Mono',monospace;font-size:0.78rem;background:#eeefe9;padding:1px 6px;border-radius:4px">**bold**</code> markup in rules text</li>
+<li style="display:flex;gap:10px"><span style="color:#527c60">✓</span>Cards, tokens, hex tiles, boards, player aids, tuckboxes, standees</li>
+</ul>
+</div>
+<div style="position:relative;transform:rotate(1deg)">
+<div style="background:#fbfbf9;border-radius:10px;padding:6px;border:1px solid #e0e1dc;box-shadow:0 18px 40px -18px #272b2450"><img alt="Design view" height="720" loading="lazy" src="ref/design.png" style="display:block;width:100%;height:auto;border-radius:6px" width="1280"/></div>
+<span style="position:absolute;top:-10px;right:30px;width:80px;height:22px;background:#e9dcb1cc;transform:rotate(4deg);box-shadow:0 1px 2px #0002"></span>
+</div>
+</div>
+<div class="feature-row" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:44px;align-items:center">
+<div style="position:relative;transform:rotate(-1deg);order:1">
+<div style="background:#fbfbf9;border-radius:10px;padding:6px;border:1px solid #e0e1dc;box-shadow:0 18px 40px -18px #272b2450"><img alt="Data view with live card preview" height="720" loading="lazy" src="ref/data.png" style="display:block;width:100%;height:auto;border-radius:6px" width="1280"/></div>
+<span style="position:absolute;top:-10px;left:28px;width:80px;height:22px;background:#e9dcb1cc;transform:rotate(-5deg);box-shadow:0 1px 2px #0002"></span>
+</div>
+<div style="order:2">
+<div style="font-size:0.72rem;letter-spacing:0.12em;color:#85877c;font-weight:600;margin-bottom:12px">DATA</div>
+<h2 style="font-family:Alegreya,serif;font-weight:400;font-size:2.1rem;letter-spacing:-0.02em;line-height:1.15;text-wrap:pretty">Your spreadsheet, but it shows you the card.</h2>
+<p style="margin-top:14px;color:#5f6557;line-height:1.55;text-wrap:pretty">Edit names, costs, quantities and rules next to a live preview. Paste a spreadsheet range, import CSV, TSV, JSON or ODS, and use formulas and child tables for nested data. Changes flow straight into the linked layout.</p>
+</div>
+</div>
+<div class="feature-row" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:44px;align-items:center">
+<div>
+<div style="font-size:0.72rem;letter-spacing:0.12em;color:#85877c;font-weight:600;margin-bottom:12px">EXPORT</div>
+<h2 style="font-family:Alegreya,serif;font-weight:400;font-size:2.1rem;letter-spacing:-0.02em;line-height:1.15;text-wrap:pretty">Print, cut, and play — tonight.</h2>
+<p style="margin-top:14px;color:#5f6557;line-height:1.55;text-wrap:pretty">Preview sheets, pair card backs, set duplex offsets and add crop marks. Desktop builds write PDFs directly. Need more than a home printer? Export component artwork as SVG or PNG, deck sheets for Tabletop Simulator or Screentop, or a production PDF/X‑4 with trim and bleed.</p>
+<div style="margin-top:18px;display:flex;flex-wrap:wrap;gap:8px">
+<span style="border-radius:4px;background:#eeefe9;color:#7c8172;font-size:0.75rem;padding:3px 8px">Home prototype</span>
+<span style="border-radius:4px;background:#eeefe9;color:#7c8172;font-size:0.75rem;padding:3px 8px">Component artwork</span>
+<span style="border-radius:4px;background:#eeefe9;color:#7c8172;font-size:0.75rem;padding:3px 8px">Tabletop Simulator</span>
+<span style="border-radius:4px;background:#eeefe9;color:#7c8172;font-size:0.75rem;padding:3px 8px">Screentop</span>
+<span style="border-radius:4px;background:#eeefe9;color:#7c8172;font-size:0.75rem;padding:3px 8px">Production PDF/X‑4</span>
+</div>
+</div>
+<div style="position:relative;transform:rotate(0.8deg)">
+<div style="background:#fbfbf9;border-radius:10px;padding:6px;border:1px solid #e0e1dc;box-shadow:0 18px 40px -18px #272b2450"><img alt="Export view with print sheet preview" height="720" loading="lazy" src="ref/export.png" style="display:block;width:100%;height:auto;border-radius:6px" width="1280"/></div>
+<span style="position:absolute;bottom:-10px;left:40%;width:80px;height:22px;background:#e9dcb1cc;transform:rotate(3deg);box-shadow:0 1px 2px #0002"></span>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px">
+<div class="hover-12" style="background:#fffef9;border:1px solid #e2e5d9;border-radius:10px;padding:22px;transition:transform .2s">
+<div style="font-size:0.72rem;letter-spacing:0.12em;color:#85877c;font-weight:600;margin-bottom:10px">REVIEW</div>
+<h3 style="font-family:Alegreya,serif;font-weight:400;font-size:1.4rem;margin-bottom:8px">Catch it before the printer does.</h3>
+<p style="font-size:0.92rem;line-height:1.5;color:#6f7566">Find overflowing text and missing assets, compare saved versions, and see exactly which components changed.</p>
+</div>
+<div class="hover-13" style="background:#fffef9;border:1px solid #e2e5d9;border-radius:10px;padding:22px;transition:transform .2s">
+<div style="font-size:0.72rem;letter-spacing:0.12em;color:#85877c;font-weight:600;margin-bottom:10px">TEST</div>
+<h3 style="font-family:Alegreya,serif;font-weight:400;font-size:1.4rem;margin-bottom:8px">A table that never needs tidying.</h3>
+<p style="font-size:0.92rem;line-height:1.5;color:#6f7566">Drag, flip, rotate, group, draw and discard. Player areas, counters, saved setups, and notes — you resolve the rules, it keeps the pieces.</p>
+</div>
+<div class="hover-14" style="background:#fffef9;border:1px solid #e2e5d9;border-radius:10px;padding:22px;transition:transform .2s">
+<div style="font-size:0.72rem;letter-spacing:0.12em;color:#85877c;font-weight:600;margin-bottom:10px">STARTERS</div>
+<h3 style="font-family:Alegreya,serif;font-weight:400;font-size:1.4rem;margin-bottom:8px">Six little head starts.</h3>
+<p style="font-size:0.92rem;line-height:1.5;color:#6f7566">Saltmarsh, Orchard Market, Wanderlands, Little Machines, Pocket Treasury and Field Notes. Original, editable starters with CC0 artwork.</p>
+</div>
+</div>
+</section>
+<!-- Download -->
+<section id="download" style="max-width:1120px;margin:0 auto;padding:80px 24px 40px">
+<div class="download-panel" style="background:#354532;color:#e8ecdc;border-radius:16px;padding:48px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;position:relative;overflow:hidden">
+<div style="position:absolute;inset:0;background-image:linear-gradient(#ffffff0c 1px,transparent 1px),linear-gradient(90deg,#ffffff0c 1px,transparent 1px);background-size:32px 32px;pointer-events:none"></div>
+<div style="position:relative">
+<div style="font-size:0.72rem;letter-spacing:0.12em;color:#b0c39b;font-weight:600;margin-bottom:12px">DOWNLOAD</div>
+<h2 style="font-family:Alegreya,serif;font-weight:400;font-size:2.2rem;letter-spacing:-0.02em;line-height:1.15;color:#fafbf6;text-wrap:pretty">Ready for your bench.</h2>
+<p style="margin-top:14px;line-height:1.55;color:#cfd8bf;text-wrap:pretty">Early release for Windows x64. Builds are unsigned — verify the checksum if you like. macOS and Linux packaging is in the source; tested downloads are Windows for now.</p>
+<div style="display:flex;gap:10px;margin-top:24px;flex-wrap:wrap">
+<a class="hover-15" data-download="setup" href="https://github.com/oipoistar/tableloom/releases/download/v0.1.2/Tableloom-0.1.2-win-x64-Setup.exe" rel="noreferrer" style="display:inline-flex;align-items:center;gap:8px;padding:12px 18px;background:#fafbf6;color:#272b24;border-radius:8px;font-weight:600;text-decoration:none" target="_blank">Setup.exe</a>
+<a class="hover-16" data-download="portable" href="https://github.com/oipoistar/tableloom/releases/download/v0.1.2/Tableloom-0.1.2-win-x64-Portable.exe" rel="noreferrer" style="display:inline-flex;align-items:center;gap:8px;padding:12px 18px;background:transparent;color:#fafbf6;border:1px solid #6f8776;border-radius:8px;font-weight:500;text-decoration:none" target="_blank">Portable.exe</a>
+</div>
+</div>
+<div style="position:relative;display:flex;flex-direction:column;gap:12px;justify-content:center">
+<div style="background:#272b24;border:1px solid #4a5540;border-radius:10px;padding:16px 18px;font-family:'JetBrains Mono',monospace;font-size:0.76rem;line-height:1.7;color:#b0c39b;overflow-wrap:anywhere">
+<div style="color:#8b9a7a"><a href="https://github.com/oipoistar/tableloom/releases/download/v0.1.2/SHA256SUMS.txt" id="checksums-link" style="color:inherit;text-decoration:underline"># SHA256SUMS.txt ↗</a></div>
+<div><span id="download-checksum" style="color:#e0e7ca">59dc8d0e23de37bbec54f8e8c8ce15a903675e4b7c2528dced9c858701cb56b5</span></div>
+<div id="download-file" style="color:#8b9a7a">Tableloom-0.1.2-win-x64-Portable.exe · 123.4 MB</div>
+</div>
+<div style="display:flex;gap:18px;flex-wrap:wrap;font-size:0.82rem;color:#cfd8bf">
+<span>Setup — shortcuts &amp; uninstaller</span><span>Portable — no install</span><span>Checks GitHub for updates</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Open source -->
+<section class="open-source" style="max-width:1120px;margin:0 auto;padding:40px 24px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:44px;align-items:center">
+<div>
+<div style="font-size:0.72rem;letter-spacing:0.12em;color:#85877c;font-weight:600;margin-bottom:12px">OPEN SOURCE</div>
+<h2 style="font-family:Alegreya,serif;font-weight:400;font-size:2.1rem;letter-spacing:-0.02em;line-height:1.15;text-wrap:pretty">Your files stay yours. So does the code.</h2>
+<p style="margin-top:14px;color:#5f6557;line-height:1.55;text-wrap:pretty">Tableloom is Apache‑2.0. Projects live on your device as a portable <code style="font-family:'JetBrains Mono',monospace;font-size:0.8rem;background:#eeefe9;padding:1px 6px;border-radius:4px">.tableloom</code> file — the editable project, its artwork and saved versions. Authoring and standard exports work offline, no account needed. Built with Electron, Vue 3 and TypeScript; the editor, CLI and exports share one SVG engine.</p>
+<div style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap">
+<a class="hover-17" href="https://github.com/oipoistar/tableloom" rel="noreferrer" style="display:inline-flex;align-items:center;gap:9px;padding:11px 16px;background:#272b24;color:#fafbf6;border-radius:8px;font-weight:500;text-decoration:none;transition:transform .15s" target="_blank">★ Star the repo</a>
+<a class="hover-18" href="https://github.com/oipoistar/tableloom/blob/main/docs/ARCHITECTURE.md" rel="noreferrer" style="display:inline-flex;align-items:center;padding:11px 16px;background:#fcfcfa;border:1px solid #daddd3;color:#272b24;border-radius:8px;font-weight:500;text-decoration:none" target="_blank">Read the architecture</a>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+<div style="background:#fffef9;border:1px solid #e2e5d9;border-radius:10px;padding:18px;transform:rotate(-1deg)"><div style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:#85867c;margin-bottom:6px">LICENSE</div><strong style="font-family:Alegreya,serif;font-size:1.3rem;font-weight:500">Apache 2.0</strong><p style="font-size:0.82rem;color:#7a816f;margin-top:4px">Code</p></div>
+<div style="background:#fffef9;border:1px solid #e2e5d9;border-radius:10px;padding:18px;transform:rotate(1.2deg)"><div style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:#85867c;margin-bottom:6px">ARTWORK</div><strong style="font-family:Alegreya,serif;font-size:1.3rem;font-weight:500">CC0‑1.0</strong><p style="font-size:0.82rem;color:#7a816f;margin-top:4px">Starter art</p></div>
+<div style="background:#fffef9;border:1px solid #e2e5d9;border-radius:10px;padding:18px;transform:rotate(0.6deg)"><div style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:#85867c;margin-bottom:6px">FONTS</div><strong style="font-family:Alegreya,serif;font-size:1.3rem;font-weight:500">SIL OFL</strong><p style="font-size:0.82rem;color:#7a816f;margin-top:4px">Alegreya, Source Sans 3, JetBrains Mono…</p></div>
+<div style="background:#fffef9;border:1px solid #e2e5d9;border-radius:10px;padding:18px;transform:rotate(-0.8deg)"><div style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:#85867c;margin-bottom:6px">FORMAT</div><strong style="font-family:Alegreya,serif;font-size:1.3rem;font-weight:500">.tableloom</strong><p style="font-size:0.82rem;color:#7a816f;margin-top:4px">Open project format</p></div>
+</div>
+</section>
+<!-- FAQ -->
+<section id="faq" style="max-width:760px;margin:0 auto;padding:60px 24px 80px">
+<div style="font-size:0.72rem;letter-spacing:0.12em;color:#85877c;font-weight:600;margin-bottom:12px">QUESTIONS FROM THE BENCH</div>
+<h2 style="font-family:Alegreya,serif;font-weight:400;font-size:2.1rem;letter-spacing:-0.02em;margin-bottom:26px">Good to know</h2>
+<div style="display:flex;flex-direction:column;gap:8px">
+<details class="faq-item" open="" style="background:#fffef9;border:1px solid #e2e5d9;border-radius:10px;overflow:hidden">
+<summary class="hover-19" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;padding:16px 18px;background:none;border:0;font:inherit;color:inherit;cursor:pointer;font-weight:600;font-size:1rem">
+<span>Does it need an account or the internet?</span><span class="faq-plus" style="font-family:JetBrains Mono,monospace;color:#85867c;transition:transform .25s;display:inline-block">+</span>
+</summary>
+<div style=""><p style="padding:0 18px 18px;color:#5f6557;line-height:1.55;font-size:0.95rem;text-wrap:pretty">No. Projects live on your device, and authoring and standard exports work offline. Update checks and optional connected features use the network. No project content is sent during an update check.</p></div>
+</details><details class="faq-item" style="background:#fffef9;border:1px solid #e2e5d9;border-radius:10px;overflow:hidden">
+<summary class="hover-20" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;padding:16px 18px;background:none;border:0;font:inherit;color:inherit;cursor:pointer;font-weight:600;font-size:1rem">
+<span>What is a .tableloom file?</span><span class="faq-plus" style="font-family:JetBrains Mono,monospace;color:#85867c;transition:transform .25s;display:inline-block">+</span>
+</summary>
+<div style=""><p style="padding:0 18px 18px;color:#5f6557;line-height:1.55;font-size:0.95rem;text-wrap:pretty">A standard ZIP archive holding the editable project, its artwork, and saved versions. Save with Ctrl+S; Tableloom also keeps local recovery copies as you work.</p></div>
+</details><details class="faq-item" style="background:#fffef9;border:1px solid #e2e5d9;border-radius:10px;overflow:hidden">
+<summary class="hover-21" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;padding:16px 18px;background:none;border:0;font:inherit;color:inherit;cursor:pointer;font-weight:600;font-size:1rem">
+<span>Can it run my game for me?</span><span class="faq-plus" style="font-family:JetBrains Mono,monospace;color:#85867c;transition:transform .25s;display:inline-block">+</span>
+</summary>
+<div style=""><p style="padding:0 18px 18px;color:#5f6557;line-height:1.55;font-size:0.95rem;text-wrap:pretty">The playtest table is manual: players resolve rules and outcomes. Tableloom handles the pieces — dragging, flipping, piles, counters, saved setups and notes.</p></div>
+</details><details class="faq-item" style="background:#fffef9;border:1px solid #e2e5d9;border-radius:10px;overflow:hidden">
+<summary class="hover-22" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;padding:16px 18px;background:none;border:0;font:inherit;color:inherit;cursor:pointer;font-weight:600;font-size:1rem">
+<span>Is it print-shop ready?</span><span class="faq-plus" style="font-family:JetBrains Mono,monospace;color:#85867c;transition:transform .25s;display:inline-block">+</span>
+</summary>
+<div style=""><p style="padding:0 18px 18px;color:#5f6557;line-height:1.55;font-size:0.95rem;text-wrap:pretty">Home prototypes export straight to PDF. Production PDF/X‑4 conversion needs a separately installed Ghostscript executable and your printer’s CMYK profile — see the printing guide.</p></div>
+</details><details class="faq-item" style="background:#fffef9;border:1px solid #e2e5d9;border-radius:10px;overflow:hidden">
+<summary class="hover-23" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;padding:16px 18px;background:none;border:0;font:inherit;color:inherit;cursor:pointer;font-weight:600;font-size:1rem">
+<span>Mac or Linux?</span><span class="faq-plus" style="font-family:JetBrains Mono,monospace;color:#85867c;transition:transform .25s;display:inline-block">+</span>
+</summary>
+<div style=""><p style="padding:0 18px 18px;color:#5f6557;line-height:1.55;font-size:0.95rem;text-wrap:pretty">Packaging for both is configured in the source, but tested downloads are Windows x64 for now. Builds are unsigned; checksums are published alongside.</p></div>
+</details><details class="faq-item" style="background:#fffef9;border:1px solid #e2e5d9;border-radius:10px;overflow:hidden">
+<summary class="hover-24" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;padding:16px 18px;background:none;border:0;font:inherit;color:inherit;cursor:pointer;font-weight:600;font-size:1rem">
+<span>Tabletop Simulator or Screentop?</span><span class="faq-plus" style="font-family:JetBrains Mono,monospace;color:#85867c;transition:transform .25s;display:inline-block">+</span>
+</summary>
+<div style=""><p style="padding:0 18px 18px;color:#5f6557;line-height:1.55;font-size:0.95rem;text-wrap:pretty">Exports provide files for import into both. There is no account-based publishing integration.</p></div>
+</details>
+</div>
+</section>
+<footer style="border-top:1px solid #e0e1dc;background:#f7f8f3">
+<div style="max-width:1120px;margin:0 auto;padding:26px 24px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-size:0.82rem;color:#8b8e81">
+<span style="display:inline-flex;width:24px;height:24px;background:#354532;border-radius:6px;align-items:center;justify-content:center;gap:2px;transform:rotate(-2deg)"><i style="display:block;width:3px;height:12px;background:#e0e7ca;border-radius:1px;transform:skewY(-24deg)"></i><i style="display:block;width:3px;height:16px;background:#b0c39b;border-radius:1px;transform:skewY(-24deg)"></i><i style="display:block;width:3px;height:12px;background:#e0e7ca;border-radius:1px;transform:skewY(-24deg)"></i></span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:0.66rem;letter-spacing:0.12em;color:#a2a696">TABLELOOM · OPEN PROJECT FORMAT</span>
+<span style="margin-left:auto;display:flex;gap:16px;flex-wrap:wrap">
+<a href="https://github.com/oipoistar/tableloom" rel="noreferrer" style="color:#606655" target="_blank">GitHub</a>
+<a href="https://github.com/oipoistar/tableloom/releases/latest" rel="noreferrer" style="color:#606655" target="_blank">Releases</a>
+<a href="https://github.com/oipoistar/tableloom/blob/main/docs/PRINTING.md" rel="noreferrer" style="color:#606655" target="_blank">Printing guide</a>
+<a href="https://github.com/oipoistar/tableloom/blob/main/docs/EXTENSIONS.md" rel="noreferrer" style="color:#606655" target="_blank">CLI &amp; extensions</a>
+</span>
+</div>
+</footer>
+</div>
+</body></html>
